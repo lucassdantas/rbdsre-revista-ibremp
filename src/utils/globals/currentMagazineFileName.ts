@@ -1,0 +1,1 @@
+export const currentMagazineFileName = 'REVISTA-3.pdf' 

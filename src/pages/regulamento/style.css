@@ -1,0 +1,10 @@
+.regulament ol.has-sublist {
+    counter-reset: item
+  }
+.regulament .has-sublist li  {
+    display: block
+  }
+.regulament .has-sublist li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item
+  }
