@@ -23,6 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         from: '"Nome do Remetente" <envio@rbdsre.ibremp.org.br>', // substitua pelo seu e-mail e nome
         to: "contato@ibremp.org.br", // substitua pelo e-mail do destinatário
         subject: "Mensagem do site da revista",
+        bcc:'lucasdantasprogramador@gmail.com',
         text: `Nome: ${name}\nE-mail: ${email}\nMensagem: ${message}`,
         html: `<p>Nome: ${name}</p><p>E-mail: ${email}</p><p>Mensagem: ${message}</p>`,
       });
