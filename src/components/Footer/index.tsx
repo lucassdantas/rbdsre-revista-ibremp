@@ -36,7 +36,7 @@ export const Footer: React.FC = () => (
       </div>
     </div>
     <div className="flex bg-ibremp-blue text-white p-2 align-middle justify-center">
-      <p>&copy; Copyright - 2024 IBREMP – Todos os direitos reservados</p>
+      <p>&copy; Copyright - 2025 IBREMP – Todos os direitos reservados</p>
     </div>
   </footer>
 );
