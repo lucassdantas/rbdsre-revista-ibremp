@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, FormEvent } from 'react';
 import Head from 'next/head';
 import { Banner } from '@/components/common/Banner';
@@ -14,7 +15,7 @@ const Contato = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    const res = await fetch('/api/send-email', {
+    const res = await fetch('http://localhost/backend/send-email.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -54,6 +55,7 @@ const Contato = () => {
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  focus:border-gray-500"
                     id="nome"
                     type="text"
+                    name='name'
                     placeholder="Seu nome"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -68,6 +70,7 @@ const Contato = () => {
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="email"
                     type="email"
+                    name='email'
                     placeholder="Seu e-mail"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -83,6 +86,7 @@ const Contato = () => {
                   <textarea
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="message"
+                    name='message'
                     placeholder="Sua mensagem"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}

@@ -8,7 +8,7 @@ const Regulamento = () => {
   return (
     <>
       <Head><title>Regulamento - Ibremp</title></Head>
-      <Banner title='Regulamento'/>
+      <Banner title='Regulamento' haveCtaButton={false}/>
       <section className='regulament flex flex-col justify-center items-center text-gray-700 py-8 px-4 gap-8'>
         <div className="flex lg:flex-row flex-col justify-between max-w-[1280px] w-full gap-4">
           <div className={`${colStyles}`}>
@@ -84,7 +84,6 @@ const Regulamento = () => {
           <div className={`flex flex-col lg:w-1/2 w-full border border-slate-950 rounded p-4`}>
             <p><span className='font-bold'>Foco e Escopo</span></p>
             <p className='whitespace-pre-wrap'>{`A Revista de Direito Societário e Registro Empresarial é um periódico científico semestral, fundada em 2019, sendo organizada e editada pelo Instituto de Registro Empresarial e Integração – IBREmp, com publicação em versão digital, objetivando fomentar discussões e promover a
-
 publicação de artigos originais, pareceres e comentários jurisprudenciais e legislativos sobre temas atuais nas áreas de Direito Societário, Registro Empresarial e Regulação Econômica.
 
 O IBREmp tem por finalidade promover, divulgar, apoiar e incentivar o estudo, a pesquisa e o debate acerca de temáticas relacionadas à Direito Societário e Registro Empresarial e Regulação Econômica, colaborando para o aperfeiçoamento das normas e políticas públicas nesta seara.`}</p>
@@ -95,7 +94,7 @@ O IBREmp tem por finalidade promover, divulgar, apoiar e incentivar o estudo, a 
 
 Os direitos autorais serão cedidos para o IBREmp, sendo vedado o seu encaminhamento simultâneo a outras revistas, exigindo-se do autor, já antes do início do processo de avaliação, declaração do ineditismo e compromisso de exclusividade pelo prazo de 9 meses.
 
-Os autores interessados em publicar artigos científicos na Revista devem encaminhar seus textos exclusivamente para o e-mail: contato@rbdsre.ibremp.org.br.
+Os autores interessados em publicar artigos científicos na Revista devem encaminhar seus textos exclusivamente para o e-mail: contato@ibremp.org.br.
 
 Como condição para sua publicação, os artigos enviados serão submetidos à avaliação prévia do Conselho Editorial e dos Pareceristas e devem obedecer às normas descritas a seguir.4`}</p>
             <p><span className='font-bold'>Periodicidade: </span>Semestral.</p>
@@ -111,22 +110,30 @@ Como condição para sua publicação, os artigos enviados serão submetidos à 
                 <li>Os trabalhos serão remetidos, sem identificação de autoria, a dois pareceristas “ad hoc” portadores de título de Mestre ou Doutor.</li>
                 <li>Em caso de controvérsia entre os avaliadores, o artigo é submetido a um terceiro avaliador.</li>
                 <li>Os pareceristas são sempre Professores Mestres ou Doutores afiliados a renomadas instituições de ensino superior, nacionais ou estrangeiras.</li>
-                <li>Os critérios utilizados na avaliação são os seguintes:</li>
-                <li>a) O parecerista se encontra em condições de avaliar o artigo por não haver conflito de interesses?</li>
-                <li>b) O título reflete de forma clara e suficiente o conteúdo do artigo?</li>
-                <li>c) O artigo cumpre as normas metodológicas da revista?</li>
-                <li>d) O artigo apresenta uma análise científica acerca do tema?</li>
-                <li>e) Há coerência e lógica no desenvolvimento do tema?</li>
-                <li>f) As conclusões correspondem às premissas da pesquisa?</li>
-                <li>g) As referências bibliográficas são suficientes, adequadas e atualizadas?</li>
-                <li>h) Os conceitos empregados ao longo do texto estão, em geral, corretos?</li>
-                <li>i) O conteúdo está de acordo com os critérios de não veiculação de preconceitos e/ou difamação e calúnias que possam ofender a integridade dos leitores e/ou indivíduos citados?</li>
-                <li>j) Comentários gerais ou específicos que o parecerista julgar pertinentes.</li>
+                <li>
+                  Os critérios utilizados na avaliação são os seguintes:
+                  <ul>
+                    <li>a) O parecerista se encontra em condições de avaliar o artigo por não haver conflito de interesses?</li>
+                    <li>b) O título reflete de forma clara e suficiente o conteúdo do artigo?</li>
+                    <li>c) O artigo cumpre as normas metodológicas da revista?</li>
+                    <li>d) O artigo apresenta uma análise científica acerca do tema?</li>
+                    <li>e) Há coerência e lógica no desenvolvimento do tema?</li>
+                    <li>f) As conclusões correspondem às premissas da pesquisa?</li>
+                    <li>g) As referências bibliográficas são suficientes, adequadas e atualizadas?</li>
+                    <li>h) Os conceitos empregados ao longo do texto estão, em geral, corretos?</li>
+                    <li>i) O conteúdo está de acordo com os critérios de não veiculação de preconceitos e/ou difamação e calúnias que possam ofender a integridade dos leitores e/ou indivíduos citados?</li>
+                    <li>j) Comentários gerais ou específicos que o parecerista julgar pertinentes.</li>
+                  </ul>
+                </li>
                 <li>Após manifestação dos pareceristas, os trabalhos serão submetidos à avaliação e aprovação do Conselho Editorial.</li>
-                <li>O processo de avaliação, pelos pareceristas e pelo Conselho Editorial, pode ensejar os seguintes possíveis resultados:</li>
-                <li>a) Artigo sem restrições de conteúdo científico: pode ser aceito para publicação.</li>
-                <li>b) Artigo com pequenas restrições: pode ser aceito mediante revisão do autor. Neste caso, o autor tem a prerrogativa de enviar, no prazo de 30 dias, uma nova versão com todas as edições e alterações realçadas em vermelho, que será submetida à avaliação dos mesmos pareceristas, para nova análise.</li>
-                <li>c) Artigo com grandes restrições de conteúdo: não deve ser aceito para publicação.</li>
+                <li>
+                  O processo de avaliação, pelos pareceristas e pelo Conselho Editorial, pode ensejar os seguintes possíveis resultados:
+                  <ul>
+                    <li>a) Artigo sem restrições de conteúdo científico: pode ser aceito para publicação.</li>
+                    <li>b) Artigo com pequenas restrições: pode ser aceito mediante revisão do autor. Neste caso, o autor tem a prerrogativa de enviar, no prazo de 30 dias, uma nova versão com todas as edições e alterações realçadas em vermelho, que será submetida à avaliação dos mesmos pareceristas, para nova análise.</li>
+                    <li>c) Artigo com grandes restrições de conteúdo: não deve ser aceito para publicação.</li>
+                  </ul>
+                </li>
                 <li>O processo de avaliação deve ser concluído no período de 1 a 2 meses.</li>
               </ol>
           </div>
@@ -140,7 +147,7 @@ Como condição para sua publicação, os artigos enviados serão submetidos à 
               <li>Os artigos devem ser inéditos e sua publicação não deve estar pendente em outro meio. Em casos excepcionais, a critério do Conselho Editorial, com a devida justificativa, poderão ser publicados artigos que já se tornaram públicos previamente. Nestes casos, será obrigatório que o autor informe esta condição, no momento do envio do artigo.</li>
               <li>Juntamente com o artigo, deverá ser enviada cópia eletrônica ou impressa da declaração do autor (modelo anexo) devidamente preenchida.</li>
               <li>Após publicados na Revista do IBREmp, os artigos poderão ser publicados em outros meios de comunicação, com a devida citação fazendo referência à publicação original.</li>
-              <li>Os artigos destinados à publicação devem ser entregues exclusivamente por e-mail, em arquivo anexo, no formato Microsoft Word e padrão ABNT NBR 14724, encaminhados para o endereço contato@rbdsre.ibremp.org.br.</li>
+              <li>Os artigos destinados à publicação devem ser entregues exclusivamente por e-mail, em arquivo anexo, no formato Microsoft Word e padrão ABNT NBR 14724, encaminhados para o endereço contato@ibremp.org.br.</li>
               <li>Os textos devem ter no mínimo 15 e no máximo 30 páginas, incluindo folha de rosto e referências, em configuração de página A4, com margens de 2cm e fonte Times New Roman tamanho 12 ou Arial 11, com alinhamento justificado, com espaçamento entre linhas de 1,5, organizado com os seguintes elementos:</li>
               <ol className='list-decimal lg:px-8 px-2 has-sublist'>
                   <li>Folha de rosto com o Título do trabalho, nome do autor/coautor com referência em nota de rodapé com asteriscos, seguido de sua titulação, função e/ou instituição a que se vincula;</li>
@@ -159,21 +166,21 @@ Como condição para sua publicação, os artigos enviados serão submetidos à 
               <li>Os pareceres devem ser inéditos e sua publicação não deve estar pendente em outro meio. Em casos excepcionais, a critério do Conselho Editorial, com a devida justificativa, poderão ser publicados pareceres que já foram publicados anteriormente. Nestes casos, será obrigatório que o autor informe esta condição, no momento do envio do parecer.</li>
               <li>Juntamente com o parecer, deverá ser enviada cópia eletrônica ou impressa da declaração do autor (modelo anexo) devidamente preenchida.</li>
               <li>Após publicados na Revista do IBREmp, os pareceres poderão ser publicados em outros meios de comunicação, com a devida citação fazendo referência à publicação original.</li>
-              <li>Os pareceres destinados à publicação devem ser entregues exclusivamente por e-mail, em arquivo anexo, no formato Microsoft Word e padrão ABNT NBR 14724, encaminhados para o endereço contato@rbdsre.ibremp.org.br.</li>
+              <li>Os pareceres destinados à publicação devem ser entregues exclusivamente por e-mail, em arquivo anexo, no formato Microsoft Word e padrão ABNT NBR 14724, encaminhados para o endereço contato@ibremp.org.br.</li>
               <li>Os pareceres devem ter no mínimo 5 e no máximo 15 páginas, incluindo notas de rodapé e referências, em configuração de página A4, com margens de 2cm e fonte Times New Roman tamanho 12 ou Arial tamanho 11, com alinhamento justificado, com espaçamento entre linhas de 1,5, organizado com os seguintes elementos:</li>
               <ol className='list-decimal lg:px-8 px-2 has-sublist'>
-                  <li value='6,1'>Nome do autor com referência em nota de rodapé com asteriscos, seguido de sua titulação, função e/ou instituição a que se vincula;</li>
-                  <li value='6.2'>Resumo contendo entre 100 e 250 palavras;</li>
-                  <li value='6.3'>Corpo de texto;</li>
-                  <li value='6.4'>Notas de rodapé numeradas (tamanho 10);</li>
-                  <li value='6.5'>Referências bibliográficas.</li>
+                  <li value='1'>Nome do autor com referência em nota de rodapé com asteriscos, seguido de sua titulação, função e/ou instituição a que se vincula;</li>
+                  <li value='2'>Resumo contendo entre 100 e 250 palavras;</li>
+                  <li value='3'>Corpo de texto;</li>
+                  <li value='4'>Notas de rodapé numeradas (tamanho 10);</li>
+                  <li value='5'>Referências bibliográficas.</li>
                   <ul className='list-disc lg:px-8 px-2 '>
                     <li>Comentários Jurisprudenciais e Legislativos</li>
                     <li>Os comentários poderão ser redigidos em português ou inglês, sendo permitida a coautoria.</li>
                     <li>Os comentários devem ser inéditos e sua publicação não deve estar pendente em outro meio. Em casos excepcionais, a critério do Conselho Editorial, com a devida justificativa, poderão ser publicados comentários que já foram publicados anteriormente. Nestes casos, será obrigatório que o autor informe esta condição, no momento do envio do comentário.</li>
                     <li>Juntamente com o comentário, deverá ser enviada cópia eletrônica ou impressa da declaração do autor (modelo anexo) devidamente preenchida.</li>
                     <li>Após publicados na Revista do IBREmp, os comentários poderão ser publicados em outros meios de comunicação, com a devida citação fazendo referência à publicação original.</li>
-                    <li>Os comentário destinados à publicação devem ser entregues exclusivamente por e-mail, em arquivo anexo, no formato Microsoft Word e padrão ABNT NBR 14724, encaminhados para o endereço contato@rbdsre.ibremp.org.br.</li>
+                    <li>Os comentário destinados à publicação devem ser entregues exclusivamente por e-mail, em arquivo anexo, no formato Microsoft Word e padrão ABNT NBR 14724, encaminhados para o endereço contato@ibremp.org.br.</li>
                     <li>Os comentários devem ter no mínimo 3 e no máximo 8 páginas, incluindo notas de rodapé e referências, em configuração de página A4, com margens de 2cm e fonte Times New Roman tamanho 12 ou Arial tamanho 11, com alinhamento justificado, com espaçamento entre linhas de 1,5, organizado com os seguintes elementos:</li>
                   </ul>
                 </ol>
@@ -197,9 +204,7 @@ Transparência e respeito: o editor deve avaliar os trabalhos submetidos para pu
 
 Confidencialidade: o editor e demais membros da Equipe Editorial não devem divulgar qualquer informação sobre os trabalhos submetidos para publicação, salvo aquelas necessárias à avaliação pelos pareceristas e pelos conselheiros editoriais.
 
-Divulgação e conflitos de interesse: o editor não deve utilizar em pesquisas próprias, sem o consentimento expresso do autor, materiais inéditos divulgados em trabalhos submetidos para publicação, bem como deve se recusar a avaliar os trabalhos que ensejam conflitos de interesse por questões competitivas,
-
-colaborativas ou outros relacionamentos/ligações com qualquer dos autores, empresas ou (possivelmente) instituições ligadas aos manuscritos.
+Divulgação e conflitos de interesse: o editor não deve utilizar em pesquisas próprias, sem o consentimento expresso do autor, materiais inéditos divulgados em trabalhos submetidos para publicação, bem como deve se recusar a avaliar os trabalhos que ensejam conflitos de interesse por questões competitivas, colaborativas ou outros relacionamentos/ligações com qualquer dos autores, empresas ou (possivelmente) instituições ligadas aos manuscritos.
 
 Envolvimento e cooperação em investigações: o editor deve adotar as medidas necessárias no caso de apresentação de reclamações éticas a respeito dos trabalhos submetidos para publicação.
 
@@ -215,9 +220,7 @@ Fontes: os pareceristas devem revisar as fontes indicadas pelos autores, bem com
 Divulgação e conflito de interesses: o parecerista não deve utilizar em pesquisas próprias, sem o consentimento expresso do autor, materiais inéditos divulgados em trabalhos submetidos para publicação, bem como deve se recusar a avaliar os trabalhos que ensejam conflitos de interesse por questões competitivas, colaborativas ou outros relacionamentos/ligações com qualquer dos autores, empresas ou (possivelmente) instituições ligadas aos manuscritos.
 
 Deveres dos Autores
-Normas gerais: os Autores são responsáveis pelo conteúdo publicado, comprometendo-se, assim, a participar ativamente da discussão dos resultados de sua pesquisa científica, bem como do processo de revisão e aprovação da versão final do trabalho, assumindo total responsabilidade pela condução, resultados e validade de toda investigação científica, bem como pelas opiniões
-
-emitidas.
+Normas gerais: os Autores são responsáveis pelo conteúdo publicado, comprometendo-se, assim, a participar ativamente da discussão dos resultados de sua pesquisa científica, bem como do processo de revisão e aprovação da versão final do trabalho, assumindo total responsabilidade pela condução, resultados e validade de toda investigação científica, bem como pelas opiniões emitidas.
 
 Veracidade do Conteúdo Textual: ao submeter o trabalho, o autor atesta que todas as afirmações contidas no manuscrito são verdadeiras ou baseadas em pesquisa com razoável exatidão. Assim, declarações fraudulentas ou intencionalmente imprecisas serão consideradas práticas que configuram comportamento antiético e inaceitável.
 

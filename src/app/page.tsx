@@ -4,12 +4,6 @@ import { HomePage } from "@/components/HomePage";
 
 export default function Home() {
   return (
-    <>
-      <Header/>
-      <main >
-        <HomePage/>
-      </main>
-      <Footer/>
-    </>
+    <HomePage/>
   );
 }
