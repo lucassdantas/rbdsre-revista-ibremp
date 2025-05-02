@@ -15,7 +15,7 @@ const Contato = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    const res = await fetch('http://localhost/backend/send-email.php', {
+    const res = await fetch('/backend/send-email.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

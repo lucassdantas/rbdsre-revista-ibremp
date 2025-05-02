@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
         <div className="limiterContainer w-[1080px] max-w-[1080px]">
           <div className={`mainHeader flex justify-between items-center ${isMenuOpen? 'flex-col':''}`}>
             <Link href='/' className={`justify-start ${isMenuOpen? 'w-full':''} `}>
-              <Image className='w-64' src={logo} alt='Logo ibremp' />
+              <img className='w-64' src={'images/IBREmp.png'} alt='Logo ibremp' />
             </Link>
             <div className="lg:hidden">
               <button onClick={toggleMenu} className="text-3xl">

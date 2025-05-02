@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import logo from '@/assets/images/IBREmp.png'
 import './style.css'
 import Link from 'next/link';
 import { AiOutlineMail } from 'react-icons/ai';
@@ -13,7 +11,7 @@ export const Footer: React.FC = () => (
         <div className="flex lg:flex-row flex-wrap w-full justify-center px-8">
           <div className="flex lg:w-2/4 w-full mb-4">
             <Link href='/' className='flex'>
-              <Image className={'w-1/2 object-contain'} src={logo} alt='Logo ibremp'/>
+              <img className={'w-1/2 object-contain'} src={'images/IBREmp.png'} alt='Logo ibremp'/>
             </Link>
           </div>
           <div className="flex flex-col lg:w-1/4 md:w-1/2 w-full mb-4">
