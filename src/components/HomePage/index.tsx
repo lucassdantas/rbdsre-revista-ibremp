@@ -1,13 +1,9 @@
 import React from 'react'
-import Image, { StaticImageData } from 'next/image'
-import magazineThirdYearImage from '@/assets/images/magazine-photos/revista-n-3.jpg'
-import magazineSecondYearImage from '@/assets/images/magazine-photos/revista-2-ano-1.jpg'
-import magazineFirstYearImage from '@/assets/images/magazine-photos/revista-ibremp-unidade-1-ano-1.png'
 import { Button } from '@/components/common/Button'
 import './style.css'
 
 interface MagazineSectionProps {
-  image:StaticImageData;
+  image:string;
   title:string;
   magazineEditionNumber:string;
   content:string;
@@ -21,7 +17,7 @@ interface MagazineSectionPropsComponent extends MagazineSectionProps{
 export const HomePage:React.FC = () => {
   const magazineSectionsContent:MagazineSectionProps[] = [
     {
-      image:magazineThirdYearImage,
+      image:'/images/magazine-photos/revista-n-3.jpg',
       title:'Revista Brasileira De Direito Societário E Registro Empresarial',
       fileName:'REVISTA-3.pdf',
       magazineEditionNumber:'N° 3',
@@ -49,7 +45,7 @@ Espero que gostem da leitura!
       `,
     },
     {
-      image:magazineSecondYearImage,
+      image:'/images/magazine-photos/revista-2-ano-1.jpg',
       title:'Revista Brasileira De Direito Societário E Registro Empresarial',
       fileName:'revista-ano-1-2.pdf',
       magazineEditionNumber:'Ano I, n°2, jun-dez 2020 - ISSN 2764-8877',
@@ -58,7 +54,7 @@ O Instituto Brasileiro de Registro Empresarial – IBREmp estruturou-se pela con
       imageSide:'right'
     },
     {
-      image:magazineFirstYearImage,
+      image:'/images/magazine-photos/revista-ibremp-unidade-1-ano-1.jpg',
       title:'Revista Brasileira De Direito Societário E Registro Empresarial',
       fileName:'revista-ano-1-1.pdf',
       magazineEditionNumber:'Ano I, n°1, jan-jun 2020 ISSN 2764-8877',
@@ -96,7 +92,7 @@ export const MagazineSection = ({image, title, magazineEditionNumber, content, i
         flex flex-col lg:w-6/12 ${imageSide === 'left'? 'lg:items-end':'lg:items-start'}
         w-full  lg:justify-center mb-4
       `}>
-        <Image src={image} alt='Revista brasileira de direito societário' className='lg:w-full w-48 max-w-[512px]'/>
+        <img src={image} alt='Revista brasileira de direito societário' className='lg:w-full w-48 max-w-[512px]'/>
       </div>
       <div className={`
         flex-col lg:w-6/12 w-full lg:justify-center lg:text-left 
