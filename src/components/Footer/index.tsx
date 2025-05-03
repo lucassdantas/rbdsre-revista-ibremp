@@ -21,6 +21,7 @@ export const Footer: React.FC = () => (
               <li><Link href='/apresentacao'>Apresentação</Link></li>
               <li><Link href='/regulamento'>Regulamento</Link></li>
               <li><Link href='/contato'>Contato</Link></li>
+              <li><Link href='/politica-de-privacidade'>Política de privacidade</Link></li>
             </ul>
           </div>
           <div className="flex flex-col lg:w-1/4 md:w-1/2 w-full">

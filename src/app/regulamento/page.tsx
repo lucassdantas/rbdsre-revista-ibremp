@@ -1,9 +1,12 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import { Banner } from '@/components/common/Banner'
 import './style.css'
+import { Form } from '@/app/regulamento/components/Form'
 
 const Regulamento = () => {
+  const [regulamentConsent, setRegulamentConsent] = useState<boolean>(false)
   const colStyles = 'flex flex-col lg:w-1/3 w-full border border-slate-950 rounded p-4'
   return (
     <>
@@ -142,7 +145,7 @@ Como condição para sua publicação, os artigos enviados serão submetidos à 
           <div className={`flex flex-col w-full border border-slate-950 rounded p-4`}>
             <p><span className='font-bold'>Formatação e Estrutura Textual</span></p>
             <p><span className='font-bold my-4'>Artigos</span></p>
-            <ol className='list-decimal lg:px-8 px-2 has-sublist'>
+            <ol className='list-decimal lg:px-8 px-2 '>
               <li>Os artigos poderão ser redigidos em português e inglês, sendo permitida a coautoria, limitada a até 3 autores.</li>
               <li>Os artigos devem ser inéditos e sua publicação não deve estar pendente em outro meio. Em casos excepcionais, a critério do Conselho Editorial, com a devida justificativa, poderão ser publicados artigos que já se tornaram públicos previamente. Nestes casos, será obrigatório que o autor informe esta condição, no momento do envio do artigo.</li>
               <li>Juntamente com o artigo, deverá ser enviada cópia eletrônica ou impressa da declaração do autor (modelo anexo) devidamente preenchida.</li>
@@ -161,7 +164,7 @@ Como condição para sua publicação, os artigos enviados serão submetidos à 
               </ol>
             </ol>
             <p><span className='font-bold my-4'>Pareceres</span></p>
-            <ol className='list-decimal lg:px-8 px-2 has-sublist'>
+            <ol className='list-decimal lg:px-8 px-2'>
               <li>Os pareceres poderão ser redigidos em português ou inglês, permitida a coautoria.</li>
               <li>Os pareceres devem ser inéditos e sua publicação não deve estar pendente em outro meio. Em casos excepcionais, a critério do Conselho Editorial, com a devida justificativa, poderão ser publicados pareceres que já foram publicados anteriormente. Nestes casos, será obrigatório que o autor informe esta condição, no momento do envio do parecer.</li>
               <li>Juntamente com o parecer, deverá ser enviada cópia eletrônica ou impressa da declaração do autor (modelo anexo) devidamente preenchida.</li>
@@ -174,21 +177,18 @@ Como condição para sua publicação, os artigos enviados serão submetidos à 
                   <li value='3'>Corpo de texto;</li>
                   <li value='4'>Notas de rodapé numeradas (tamanho 10);</li>
                   <li value='5'>Referências bibliográficas.</li>
-                  <ul className='list-disc lg:px-8 px-2 '>
-                    <li>Comentários Jurisprudenciais e Legislativos</li>
-                    <li>Os comentários poderão ser redigidos em português ou inglês, sendo permitida a coautoria.</li>
-                    <li>Os comentários devem ser inéditos e sua publicação não deve estar pendente em outro meio. Em casos excepcionais, a critério do Conselho Editorial, com a devida justificativa, poderão ser publicados comentários que já foram publicados anteriormente. Nestes casos, será obrigatório que o autor informe esta condição, no momento do envio do comentário.</li>
-                    <li>Juntamente com o comentário, deverá ser enviada cópia eletrônica ou impressa da declaração do autor (modelo anexo) devidamente preenchida.</li>
-                    <li>Após publicados na Revista do IBREmp, os comentários poderão ser publicados em outros meios de comunicação, com a devida citação fazendo referência à publicação original.</li>
-                    <li>Os comentário destinados à publicação devem ser entregues exclusivamente por e-mail, em arquivo anexo, no formato Microsoft Word e padrão ABNT NBR 14724, encaminhados para o endereço contato@ibremp.org.br.</li>
-                    <li>Os comentários devem ter no mínimo 3 e no máximo 8 páginas, incluindo notas de rodapé e referências, em configuração de página A4, com margens de 2cm e fonte Times New Roman tamanho 12 ou Arial tamanho 11, com alinhamento justificado, com espaçamento entre linhas de 1,5, organizado com os seguintes elementos:</li>
-                  </ul>
-                </ol>
-                <ol className='list-decimal lg:px-8 px-2 has-sublist'>
+                  <li>Comentários Jurisprudenciais e Legislativos</li>
+                  <li>Os comentários poderão ser redigidos em português ou inglês, sendo permitida a coautoria.</li>
+                  <li>Os comentários devem ser inéditos e sua publicação não deve estar pendente em outro meio. Em casos excepcionais, a critério do Conselho Editorial, com a devida justificativa, poderão ser publicados comentários que já foram publicados anteriormente. Nestes casos, será obrigatório que o autor informe esta condição, no momento do envio do comentário.</li>
+                  <li>Juntamente com o comentário, deverá ser enviada cópia eletrônica ou impressa da declaração do autor (modelo anexo) devidamente preenchida.</li>
+                  <li>Após publicados na Revista do IBREmp, os comentários poderão ser publicados em outros meios de comunicação, com a devida citação fazendo referência à publicação original.</li>
+                  <li>Os comentário destinados à publicação devem ser entregues exclusivamente por e-mail, em arquivo anexo, no formato Microsoft Word e padrão ABNT NBR 14724, encaminhados para o endereço contato@ibremp.org.br.</li>
+                  <li>Os comentários devem ter no mínimo 3 e no máximo 8 páginas, incluindo notas de rodapé e referências, em configuração de página A4, com margens de 2cm e fonte Times New Roman tamanho 12 ou Arial tamanho 11, com alinhamento justificado, com espaçamento entre linhas de 1,5, organizado com os seguintes elementos:</li>
                   <li>Nome do autor com referência em nota de rodapé com asteriscos, seguido de sua titulação, função e/ou instituição a que se vincula;</li>
                   <li>Corpo de texto;</li>
                   <li>Notas de rodapé numeradas (tamanho 10); 6.4 Referências bibliográficas.</li>
                 </ol>
+             
               </ol>
           </div>
         </div>
@@ -235,6 +235,31 @@ Autoria: a autoria do trabalho deve ser restrita àqueles que fizeram uma contri
 Divulgação e conflitos de interesses: o autor deve informar, no momento da submissão do trabalho, qualquer situação que possa ensejar conflito de interesse, de ordem pessoal, comercial, política, acadêmica, financeira ou de outra natureza que possa influenciar os resultados ou a interpretação de seu artigo, indicando ainda todas as fontes de apoio financeiro ao trabalho.
 
 Erros fundamentais em trabalhos publicados: se o autor identificar erro significativo ou imprecisão em seu trabalho publicado, deverá informar imediatamente ao editor da revista e cooperar para a devida correção.`}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className='flex flex-col justify-center items-center text-gray-700 py-8 px-4 gap-8'>
+        <div className='flex lg:flex-row flex-col justify-between items-center max-w-[1280px] w-full gap-4'>
+          <div className={`flex flex-col lg:w-1/2 w-full gap-4`}>
+            <h2 className='lg:text-4xl text-2xl text-gray-700 font-bold'>Participe do lançamento</h2>
+            <p>
+            Participe do lançamento da 4ª edição da "Revista Brasileira de Direito Societário e Registro Empresarial", marcada para junho de 2025! Este evento inédito reunirá profissionais renomados da área, representantes de órgãos administrativos e empresas do setor. 
+            </p>
+            <p>
+            Além disso, não perca o I Seminário de Registro Empresarial Brasileiro, que discutirá inovações tecnológicas para agilizar o registro empresarial. Inscreva-se e junte-se a nós para explorar as novidades que podem transformar sua atuação no mercado
+            </p>
+          </div>
+          <div className={`lg:w-1/2 w-full flex flex-col lg:items-center items-start`}>
+            {regulamentConsent? 
+            <Form/>:
+            <div className='text-left'>
+              <button onClick={() => setRegulamentConsent(true)} className="ml-auto bg-ibremp-yellow hover:brightness-110 text-black font-bold py-2 px-4 rounded cursor-pointer">
+                Concordo com o regulamento e quero enviar meu artigo
+              </button>
+
+            </div>
+            }
           </div>
         </div>
       </section>
