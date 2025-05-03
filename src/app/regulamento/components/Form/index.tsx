@@ -87,7 +87,7 @@ export const Form = () => {
     if(!validateStep(3)) return
 
     // Envio do formulário via fetch
-    fetch('/backend/send-email.php', {
+    fetch('/backend/send-regulament-email.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
