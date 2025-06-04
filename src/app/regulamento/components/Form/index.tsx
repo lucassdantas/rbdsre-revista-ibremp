@@ -16,6 +16,8 @@ export const Form = () => {
   })
   const [message, setMessage] = useState<string>('')
   const [subscriptionStatus, setSubscriptionStatus] = useState<boolean>(false)
+  const [acceptedTerms, setAcceptedTerms] = useState(false)
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
@@ -27,7 +29,15 @@ export const Form = () => {
     }
     return false
   }
-
+  const isInvalidPhone = (phone: string) => {
+    const digits = phone.replace(/\D/g, '');
+    // Verifica se tem menos de 10 ou mais que 11 dígitos, ou se todos os dígitos são iguais
+    return (
+      digits.length < 10 ||
+      digits.length > 11 ||
+      /^(\d)\1{9,10}$/.test(digits)
+    );
+  }
   // Função de validação para cada etapa
   const validateStep = (step: number) => {
     switch (step) {
@@ -38,6 +48,10 @@ export const Form = () => {
         }
         if (isInvalidEmail(formData.email)) {
           setMessage('Por favor, insira um e-mail válido');
+          return false;
+        }
+        if (isInvalidPhone(formData.whatsapp)) {
+          setMessage('Preencha o campo corretamente');
           return false;
         }
         break;
@@ -85,6 +99,10 @@ export const Form = () => {
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     if(!validateStep(3)) return
+    if (!acceptedTerms) {
+      setMessage('É necessário concordar com o regulamento de ciência e comprometimento com o regulamento')
+      return
+    }
 
     // Envio do formulário via fetch
     fetch('/backend/send-regulament-email.php', {
@@ -194,7 +212,7 @@ export const Form = () => {
             <label className="block">
               Redes Sociais:
               <input
-                placeholder='facebook.com/meuperfil'
+                placeholder='LinkedIn.com/meuperfil'
                 type="text"
                 name="redes_sociais"
                 value={formData.redes_sociais}
@@ -205,7 +223,7 @@ export const Form = () => {
           </>
         )}
 
-        {step === 3 && (
+        {step === 3 && !subscriptionStatus && (
           <>
             <label className="block">
               Profissão:
@@ -245,6 +263,18 @@ export const Form = () => {
                   <span className="ml-1">Não</span>
                 </label>
               </div>
+            </fieldset>
+            <fieldset>
+              <label className="block mt-4">
+                <input
+                  type="checkbox"
+                  checked={acceptedTerms}
+                  onChange={(e) => setAcceptedTerms(e.target.checked)}
+                  className="mr-2"
+                />
+                Li e declaro estar ciente do regulamento do site, comprometendo-me a respeitar suas diretrizes e condições.
+                Também declaro ter informado dados verídicos neste formulário.
+              </label>
             </fieldset>
           </>
         )}

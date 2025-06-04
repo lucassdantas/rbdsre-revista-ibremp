@@ -63,7 +63,7 @@ Ao redor do mundo, há muitos órgãos que efetivam o registro dos empresários 
     },
   ]
   return (
-  <section className='flex flex-col items-center text-gray-700'>
+  <section className='flex flex-col items-center text-gray-700 min-h-[300px]'>
     {magazineSectionsContent.map((magazineSection:MagazineSectionProps,i:number) => (
           <MagazineSection 
             image={magazineSection.image} 
@@ -92,7 +92,7 @@ export const MagazineSection = ({image, title, magazineEditionNumber, content, i
         flex flex-col lg:w-6/12 ${imageSide === 'left'? 'lg:items-end':'lg:items-start'}
         w-full  lg:justify-center mb-4
       `}>
-        <img src={image} alt='Revista brasileira de direito societário' className='lg:w-full w-48 max-w-[512px]'/>
+        <img src={image} alt='Revista brasileira de direito societário' className='lg:w-full w-48 max-w-[512px]' width={512} height={762}/>
       </div>
       <div className={`
         flex-col lg:w-6/12 w-full lg:justify-center lg:text-left 

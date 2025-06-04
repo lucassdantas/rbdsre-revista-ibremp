@@ -247,7 +247,7 @@ Erros fundamentais em trabalhos publicados: se o autor identificar erro signific
             Participe do lançamento da 4ª edição da "Revista Brasileira de Direito Societário e Registro Empresarial", marcada para junho de 2025! Este evento inédito reunirá profissionais renomados da área, representantes de órgãos administrativos e empresas do setor. 
             </p>
             <p>
-            Além disso, não perca o I Seminário de Registro Empresarial Brasileiro, que discutirá inovações tecnológicas para agilizar o registro empresarial. Inscreva-se e junte-se a nós para explorar as novidades que podem transformar sua atuação no mercado
+            Além disso, não perca o I Seminário de Registro Empresarial Brasileiro, que discutirá inovações tecnológicas para agilizar o registro empresarial. Inscreva-se e junte-se a nós para explorar as novidades que podem transformar sua atuação no mercado.
             </p>
           </div>
           <div className={`lg:w-1/2 w-full flex flex-col lg:items-center items-start`}>
